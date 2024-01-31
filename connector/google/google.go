@@ -174,11 +174,11 @@ func (c *googleConnector) LoginURL(s connector.Scopes, callbackURL, state string
 		opts = append(opts, oauth2.SetAuthURLParam("hd", preferredDomain))
 	}
 
-	if s.OfflineAccess {
+	if s.OfflineAccess && c.forceAccountSelector {
+		opts = append(opts, oauth2.AccessTypeOffline, oauth2.SetAuthURLParam("prompt", "consent select_acount"))
+	} else if s.OfflineAccess {
 		opts = append(opts, oauth2.AccessTypeOffline, oauth2.SetAuthURLParam("prompt", "consent"))
-	}
-
-	if c.forceAccountSelector {
+	} else if c.forceAccountSelector {
 		opts = append(opts, oauth2.SetAuthURLParam("prompt", "select_account"))
 	}
 
