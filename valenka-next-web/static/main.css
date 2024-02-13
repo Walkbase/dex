@@ -1,0 +1,168 @@
+/* roboto-latin-400-normal */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(./fonts/roboto-latin-400-normal.woff2) format("woff2"),
+        url(./fonts/roboto-latin-400-normal.woff) format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+        U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* roboto-latin-300-normal */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: url(./fonts/roboto-latin-300-normal.woff2) format("woff2"),
+        url(./fonts/roboto-latin-300-normal.woff) format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+        U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, Sans-serif !important;
+}
+
+.dex-container {
+    padding: 0;
+    min-height: 100%;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2),
+        0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+    width: 100%;
+    max-width: 468px;
+}
+
+.dex-btn {
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+}
+
+.dex-btn:focus {
+    outline: none;
+}
+
+.dex-btn-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    width: 24px;
+    background-color: transparent !important;
+}
+
+.dex-btn-icon--google {
+    background-color: #ffffff;
+    background-image: url(../static/img/google-icon.svg);
+}
+
+.dex-btn-icon--local {
+    background-color: #84b6ef;
+    background-image: url(../static/img/email-icon.svg);
+}
+
+.dex-btn-icon--gitea {
+    background-color: #f5f5f5;
+    background-image: url(../static/img/gitea-icon.svg);
+}
+
+.dex-btn-icon--github {
+    background-color: #f5f5f5;
+    background-image: url(../static/img/github-icon.svg);
+}
+
+.dex-btn-icon--gitlab {
+    background-color: #f5f5f5;
+    background-image: url(../static/img/gitlab-icon.svg);
+    background-size: contain;
+}
+
+.dex-btn-icon--keystone {
+    background-color: #f5f5f5;
+    background-image: url(../static/img/keystone-icon.svg);
+    background-size: contain;
+}
+
+.dex-btn-icon--oidc {
+    background-color: #ebebee;
+    background-image: url(../static/img/oidc-icon.svg);
+    background-size: contain;
+}
+
+.dex-btn-icon--bitbucket-cloud {
+    background-color: #205081;
+    background-image: url(../static/img/bitbucket-icon.svg);
+}
+
+.dex-btn-icon--atlassian-crowd {
+    background-color: #cfdcea;
+    background-image: url(../static/img/atlassian-crowd-icon.svg);
+}
+
+.dex-btn-icon--ldap {
+    background-color: #84b6ef;
+    background-image: url(../static/img/ldap-icon.svg);
+}
+
+.dex-btn-icon--saml {
+    background-color: #84b6ef;
+    background-image: url(../static/img/saml-icon.svg);
+}
+
+.dex-btn-icon--linkedin {
+    background-image: url(../static/img/linkedin-icon.svg);
+    background-size: contain;
+}
+
+.dex-btn-icon--microsoft {
+    background-image: url(../static/img/microsoft-icon.svg);
+}
+
+.dex-btn-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.dex-subtle-text {
+    color: #808184;
+    font-size: 12px;
+}
+
+.dex-separator {
+    color: #808184;
+}
+
+.dex-list {
+    color: #808184;
+    display: inline-block;
+    font-size: 12px;
+    list-style: circle;
+    text-align: left;
+}
+
+.dex-error-box {
+    background-color: #c23c44;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    max-width: 320px;
+    padding: 4px 0;
+}
+
+.dex-error-box {
+    margin: 20px auto;
+}
