@@ -79,9 +79,6 @@ COPY --from=builder /usr/local/src/dex/web /srv/dex/web
 
 COPY --from=gomplate /usr/local/bin/gomplate /usr/local/bin/gomplate
 
-# Insert valenka template
-COPY --from=builder /usr/local/src/dex/valenka-next-web /srv/dex/valenka-next-web
-
 USER 1001:1001
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
