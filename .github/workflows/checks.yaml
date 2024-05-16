@@ -4,14 +4,19 @@ on:
   pull_request:
     types: [opened, labeled, unlabeled, synchronize]
 
+permissions:
+  contents: read
+
 jobs:
   release-label:
     name: Release note label
     runs-on: ubuntu-latest
 
+    if: github.repository == 'dexidp/dex'
+
     steps:
       - name: Check minimum labels
-        uses: mheap/github-action-required-labels@cc7a79fadbba6ed1d6f0efd70707e7b8bf7e6910 # v5.2.0
+        uses: mheap/github-action-required-labels@132879b972cb7f2ac593006455875098e73cc7f2 # v5.4.0
         with:
           mode: minimum
           count: 1
