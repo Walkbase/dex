@@ -1,3 +1,7 @@
-FROM scratch
+FROM busybox
 
-COPY web /walkbase-theme
+LABEL org.opencontainers.image.source https://github.com/Walkbase/dex
+
+COPY web /data
+
+CMD [ "cp", "-rv", "/data/", "/walkbase-theme/" ]
